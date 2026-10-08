@@ -18,8 +18,31 @@ import {
   Smartphone,
   Sparkles,
   Wind,
+  type LucideIcon,
 } from "lucide-react";
+function ResearchFeature({
+  icon: Icon,
+  title,
+  text,
+}: {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="border-t border-white/[0.07] pt-5">
+      <Icon size={18} className="text-purple-300/60" />
 
+      <h3 className="mt-4 text-sm font-medium text-white/75">
+        {title}
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-white/35">
+        {text}
+      </p>
+    </div>
+  );
+}
 const sensors = [
   {
     icon: Fingerprint,
